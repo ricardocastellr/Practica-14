@@ -16,7 +16,12 @@ app.get('/',function (req,res){
 });
 
 app.get('/person/:id', (req,res)=>{
-    res.render('person',{ID: req.params.id, Qstr: req.query.qrst});
+    res.render('person',{ID: req.params.id, Qrst: req.query.qrst});
 });
+
+app.get('/person2/:id', (req,res)=>{
+    res.render('person2',{ID: req.params.id, Message: req.query.message, Times: req.query.times});
+});
+
 
 app.listen(port);
